@@ -62,12 +62,12 @@ Here is the place where you can see trips you'd maybe like to travel in! <br> </
 
 {% if trips != None %}
 	{% for trip in trips %}
-  			 <table style="width:350px" class="{{trip.classname}}">
+  			 <a href={{url_for('results', trip_id = trip.id)}}><table style="width:350px" class="{{trip.classname}}">
   			
  				 <tr>
 
 
- 				 	<td>  <a href="{{url_for('results')}}"> </a>  </td>
+ 				 	<td>    </td>
  	  				<th class="title" >{{trip.name}}</th>
 
  	  				 <th> <img class="image" src={{trip.url}} width="254" height="254" align="center" 
@@ -75,7 +75,7 @@ Here is the place where you can see trips you'd maybe like to travel in! <br> </
 
 	 			 </tr>
 
-			</table>
+			</table></a>
 	{% endfor %}
 {% else %}
 

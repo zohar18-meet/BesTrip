@@ -30,9 +30,10 @@ def information():
 def contact():
     return render_template('contact.html')
 
-@app.route('/results')
-def results():
-    return render_template('results.html',trips=trip)
+@app.route('/results/<trip_id>')
+def results(trip_id):
+    trip = Trip.query.filter_by(id=trip_id).first()
+    return render_template('results.html',trip=trip)
 
 @app.route('/filter', methods=['GET', 'POST'])
 def filter():
