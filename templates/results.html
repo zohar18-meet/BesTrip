@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>results</title>
+</head>
+<body>
+
+{% for trip in trips %}
+
+<h3> hello </h3>
+
+
+<h1> 
+	{{trip.name}}
+</h1>
+
+<p class="HereIsThePlace"> 
+Here is the place where you can see trips you'd maybe like to travel in! <br> </p>
+
+<p class="Trip_bank_info">	
+	{{trip.info}}
+
+</p>
+
+{% endfor %}
+
+
+</body>
+</html>

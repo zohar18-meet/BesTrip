@@ -1,0 +1,42 @@
+/*
+body {
+    background-image: url("TravelersLookingAtTheView.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-position: center; 
+    background-size: 1505px 750px;
+} */ 
+
+
+body {
+    background-color:   #F5F5DC
+}
+
+
+
+.about {
+
+  font-family: 'Architects Daughter';
+  font-size: 22px;
+  font-style: normal;
+  font-variant: normal;
+  text-align:left;
+  font-weight: bold;
+}
+
+.ENJOY {
+
+  font-family: 'Calligraffitti';
+  font-size: 22px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  text-align:left;
+}
+
+
+h1 {
+    font-family: 'Carter One';
+    text-align:left;
+}
+

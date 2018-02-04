@@ -1,0 +1,182 @@
+h1 {
+    font-family: 'Carter One';
+    text-align:left;
+     text-align:center;
+       font-size: 45px;
+}
+
+body {
+    background-color:   #F5F5DC
+}
+
+
+h2 {
+ font-family: 'Gochi Hand';
+  font-size: 34px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  text-align:center;
+  line-height: 30px;
+}
+
+.Trip_bank_info{ 
+
+  font-family: 'Coming soon';
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  text-align:center;
+  line-height: 29px;
+}
+
+.HereIsThePlace{ 
+
+  font-family: 'Coming soon';
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+    font-weight: bold;
+  text-align:center;
+  line-height: 29px;
+}
+
+.table_heading {
+	font-size: 30px;
+  font-weight: bold;
+	}
+
+ .North_TheGolanHeights_Banias{
+
+	background-color: #FFA07A;
+}
+
+.title {
+	font-family: 'Coming soon';
+	 font-size: 22px;
+	 font-weight: bold;
+	 text-align:center;
+}
+
+div.image { /* Position Logo and Text  */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.North_EmekIzrael_Zippori,.North_UpperGalilee_kziv,.Center_Coastal-plain_SoreqAndPalmachim{
+
+	background-color: #BC8F8F;
+
+}
+
+.North_TzfatMeron_Zalmon,.North_TheGolanHeights_Zavitan, .Center_Haifa_LittleSwitzerland  {
+
+		background-color: 	#cc9966;
+
+}
+
+.Center_Haifa_Hashofet, .Center_Haifa_IsraelNationalTrail  {
+
+	background-color: #FFA07A;
+}
+
+.title_LittleSwitzerland {
+        font-family: 'Coming soon';
+   font-size: 16px;
+   font-weight: bold;
+   text-align:center;
+}
+
+.title_soreq {
+          font-family: 'Coming soon';
+   font-size: 18px;
+   font-weight: bold;
+   text-align:center;
+}
+
+.Center_Shomron_Petzl,.south_NegevCenter_Havarim, .south_Negevsouth_timna {
+   background-color: #FFA07A;
+}
+
+.Center_Jerusalem_katlav, .south_judaean_peres {
+    background-color: #BC8F8F;
+}
+
+.south_judaean_tzeelim, .south_NegevNorth_Nitzana, .south_NegevCenter_Masor {
+      background-color: #cc9966;
+}
+
+
+input[type=submit] {
+    width: 10%;
+    background-color: maroon;
+    color: white;
+    padding: 14px 18px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=number] {
+    width: 5%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+ select {
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.container {
+    overflow: hidden;
+}
+
+.filterDiv {
+    float: left;
+    background-color: #2196F3;
+    color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="../static/css/trips.css" rel="stylesheet" type="text/css"  />
+<link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Caveat Brush' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Coming Soon' rel='stylesheet'>
+
+
+	<title> trips BesTrip</title>
+</head>
+<body>
+
+<h1> 
+	The Trips Bank
+</h1>
+
+<p class="HereIsThePlace"> 
+Here is the place where you can see trips you'd maybe like to travel in! <br> </p>
+
+<p class="Trip_bank_info">	
+	All the trips have reviews of other travelers who were in the same place as you are today. <br>
+	For easier search of trip, tell us which area you'd like to travel in, and which difficulty of trip you'll enjoy the most. <br>
+	If you want to see all the information about the trip you have searched, click on it and all the information will be shown. <br>
+	In case you know about trip which is not in our Trip-Bank, contact us so we'll have the opportunity to prove ourselfe. <br>
+
+</p>
+
+<form action="{{url_for('filter')}}" method="post">
+&emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;
+<span class="table_heading"> Area of the trip </span>
+<select name="area">
+	<!-- north -->
+<option value="Golan Heights">Golan Heights</option>
+<option value="Emek Izrael">Emek Izrael</option>
+<option value="Upper Galilee">Upper Galilee</option>
+<option value="Tzfat and Meron Mountains"> Tzfat and Meron Mountains</option>
+
+  <!-- center -->
+<option value="Haifa and Carmel mountain"> Haifa and Carmel mountain </option>
+<option value="Coastal plain"> Coastal plain </option>
+<option value="The Shomron"> The Shomron </option>
+<option value="Jerusalem"> Jerusalem </option>
+ 
+ <!-- south -->
+<option value="Dead sea and Judaean desert"> Dead sea and Judaean desert </option>
+<option value="north of the Negev"> north of the Negev </option>
+<option value="Center of the Negev">Center of the Negev and craters </option>
+<option value="South of the Negev and Eilat"> South of the Negev and Eilat </option> 
+</select>
+    		<!--level of the trip--> 
+
+&emsp;&emsp;
+<span class="table_heading"> the level of the trip </span>
+ <input name="difficulty" type="number" placeholder="1" min="1" max="5">
+
+			<!-- button --> 
+ &emsp;&emsp;
+	<input type="submit">
+</form>
+
+{% if trips != None %}
+	{% for trip in trips %}
+  			 <table style="width:350px" class="{{trip.classname}}">
+  			
+ 				 <tr>
+
+
+ 				 	<td>  <a href="{{url_for('results')}}"> </a>  </td>
+ 	  				<th class="title" >{{trip.name}}</th>
+
+ 	  				 <th> <img class="image" src={{trip.url}} width="254" height="254" align="center" 
+ 	  				 > </th> 
+
+	 			 </tr>
+
+			</table>
+	{% endfor %}
+{% else %}
+
+<!-- the list of the trips -->  
+<br> <br>
+
+
+<table style="width:100%" > 
+
+   <tr>
+<!-- line1 -->
+   	<th>
+
+  			 <table style="width:350px" class="North_TheGolanHeights_Banias" >
+ 				 <tr>
+
+ 	  				<th class="title" >  Banias river (Hermon river)   </th>
+
+ 	  				 <th> <img class="image" src="../static/pictures/GolanHeights_Banias.jpg" alt="Banias river"  width="254" height="254" align="center" >  </th> 
+
+	 			 </tr>
+
+			</table>
+
+	</th>
+
+
+	<th>
+
+			 <table style="width:350px" class="North_EmekIzrael_Zippori">
+ 				 <tr>
+
+  					  <th class="title" >  Zippori river   </th>
+
+  					  <th> <img class="image" src="../static/pictures/EmekIzraelNahalZippori.jpg" alt="Zippori river"  width="254" height="254" align="center" >  </th> 
+
+ 				 </tr>
+
+			</table>
+ 
+	</th>
+
+	<th>
+			 <table style="width:350px" class="North_TzfatMeron_Zalmon">
+ 	 			<tr>
+
+  	  				<th class="title" >  Zalmon river   </th>
+
+  	 				<th> <img class="image" src="../static/pictures/TzfatMeron_Zalmon.jpg" alt="Zalmon river"  width="254" height="254" align="center">  </th> 
+
+ 				 </tr>
+
+			</table>
+
+	</th>
+
+  </tr>
+ <!-- line 2 -->
+  <tr>
+
+    <th>
+ 
+    				 <table style="width:350px" class="North_UpperGalilee_kziv">
+ 	 			<tr>
+
+  	  				<th class="title" >  Kziv river   </th>
+
+  	 				<th> <img class="image" src="../static/pictures/UpperGalilee_Kziv.jpg" alt="Kziv river"  width="254" height="254" align="center">  </th> 
+
+ 				 </tr>
+
+			</table>
+    	
+    </th> 
+
+    <th>
+			 <table style="width:350px" class="North_TheGolanHeights_Zavitan">
+ 	 			<tr>
+
+  	  				<th class="title" >  Zavitan stream: upper   </th>
+
+  	 				<th> <img class="image" src="../static/pictures/GolanHeights_Zavitan.jpg" alt="Zavitan stream"  width="254" height="254" align="center">  </th> 
+
+ 				 </tr>
+
+			</table>
+
+	</th>
+
+	 <th>
+			 <table style="width:350px" class="Center_Haifa_Hashofet">
+ 	 			<tr>
+
+  	  				<th class="title" >  Hashofet stream </th>
+
+  	 				<th> <img class="image" src="../static/pictures/Haifa_Hashofet.jpg" alt="Hashfet stream"  width="254" height="254" align="center">  </th> 
+
+ 				 </tr>
+ 
+			</table>
+
+	 </th>
+    
+   </tr>
+<!-- line 3 -->
+  	 <tr>
+   			 <th>
+				 <table style="width:350px" class="Center_Haifa_LittleSwitzerland">
+ 	 				<tr>
+
+  	  					<th class="title_LittleSwitzerland" >  Little Switzerland </th>
+
+  	 					<th> <img class="image" src="../static/pictures/Haifa_LittleSwl.jpg" alt="Little Switzerland"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+		 </th>
+
+   			 <th>
+				 <table style="width:350px" class="Center_Haifa_IsraelNationalTrail">
+ 	 				<tr>
+
+  	  					<th class="title" > Israel national trail: Kibbuts Yagur to Ein Hod </th>
+
+  	 					<th> <img class="image" src="../static/pictures/Haifa_Yagur.jpg" alt="Kibbuts Yagur to Ein Hod"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+		 </th>		 
+
+		 		 <th>
+				 <table style="width:350px" class="Center_Coastal-plain_SoreqAndPalmachim">
+ 	 				<tr>
+
+  	  					<th class="title_soreq" > Soreq stream and Palmachim beach </th>
+
+  	 					<th> <img class="image" src="../static/pictures/CoastalPlain_SoreqPalmachim.jpg" alt="Kibbuts Yagur to Ein Hod"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+		 </th>		 
+
+<tr>
+	<th>
+		
+						 <table style="width:350px" class="Center_Shomron_Petzl">
+ 	 				<tr>
+
+  	  					<th class="title" > Petzl river </th>
+
+  	 					<th> <img class="image" src="../static/pictures/Shomron_Pzal.jpg" alt="Petzl river"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+	</th>
+
+
+	<th>
+		
+						 <table style="width:350px" class="Center_Jerusalem_katlav">
+ 	 				<tr>
+
+  	  					<th class="title" > katlav river  </th>
+
+  	 					<th> <img class="image" src="../static/pictures/Jerusalem_Katlav.jpg" alt="katlav river"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+	</th>
+
+	<th>
+		
+						 <table style="width:350px" class="south_judaean_tzeelim">
+ 	 				<tr>
+
+  	  					<th class="title" > Tzeelim river  </th>
+
+  	 					<th> <img class="image" src="../static/pictures/Judaean_Tzeelim.jpg" alt="Tze'elim river"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+	</th>
+</tr>
+
+<tr>
+		<th>
+		
+					 <table style="width:350px" class="south_judaean_peres">
+ 	 				<tr>
+
+  	  					<th class="title" > Peres river  </th>
+
+  	 					<th> <img class="image" src="../static/pictures/Judaean_peres.jpg" alt="Peres river"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+	</th>
+
+		<th>
+		
+					 <table style="width:350px" class="south_NegevNorth_Nitzana">
+ 	 				<tr>
+
+  	  					<th class="title" > Nitzana  </th>
+
+  	 					<th> <img class="image" src="../static/pictures/northnegev_nitzana.jpg" alt="Nitzana"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+	</th>
+
+		<th>
+		
+					 <table style="width:350px" class="south_NegevCenter_Havarim">
+ 	 				<tr>
+
+  	  					<th class="title" > Havarim river  </th>
+
+  	 					<th> <img class="image" src="../static/pictures/Negevcenter_havarim.jpg" alt="Havarim river"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+	</th>
+
+
+</tr>
+
+<tr>
+			<th>
+		
+					 <table style="width:350px" class="south_NegevCenter_Masor">
+ 	 				<tr>
+
+  	  					<th class="title" > Masor mountain  </th>
+
+  	 					<th> <img class="image" src="../static/pictures/Negevcenter_masor.jpg" alt="Masor mountain"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+	</th>
+
+				<th>
+		
+					 <table style="width:350px" class="south_Negevsouth_timna">
+ 	 				<tr>
+
+  	  					<th class="title" > Timna valley  </th>
+
+  	 					<th> <img class="image" src="../static/pictures/southnegev_timna.jpg" alt="Timna valley"  width="254" height="254" align="center">  </th> 
+
+ 					 </tr>
+ 
+				</table>
+
+	</th>
+
+
+</tr>
+
+
+   </tr>
+</table>
+
+
+{% endif %}
+</body>
+</html>

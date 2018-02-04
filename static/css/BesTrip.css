@@ -1,0 +1,75 @@
+
+body {
+    background-image: url("../pictures/APathAndAMountain.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 1305px 690px;
+}
+
+h1 {
+
+  font-family: 'Bevan';
+  font-size: 72px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  text-align:center;
+  line-height: 26.4px;
+}
+
+
+
+h2 {
+
+  font-family: 'Gochi Hand';
+  font-size: 46px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  text-align:center;
+  line-height: 26.4px;
+}
+
+/* class = the_headers */ 
+
+.the_headers {
+    word-spacing: 410px; 
+}
+
+ .information {  
+    
+    font-family: 'Amatic SC';
+    font-size: 46px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+ }
+
+ .the_trips { 
+    font-family: 'Amatic SC';
+    font-size: 46px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+ }
+
+.contact {
+    font-family: 'Amatic SC';
+    font-size: 46px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none; 
+}
+
+text-decoration: none;
+}
+
+/* the end of the class = the_headers */ 
+
+
